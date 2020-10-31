@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/kunmi02/TNW/5c30e60cb2b94b7537ddf4e2fdf6a26e4abe01b0/index.html)
+[Live Demo Link](https://rawcdn.githack.com/akshay-narkar/tnw-clone/66189cdf08e5285fecd6d3d1e917c85cb2bd1fcc/index.html)
 
 ## Automated Test
 
