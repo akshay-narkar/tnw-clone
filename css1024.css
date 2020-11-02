@@ -57,12 +57,7 @@
 }
 
 .color-gradient {
-  background:
-    linear-gradient(
-      to top left,
-      rgba(245, 246, 252, 0.486),
-      rgba(243, 12, 12, 0.705)
-    );
+  background: linear-gradient(to top left, rgba(245, 246, 252, 0.486), rgba(243, 12, 12, 0.705));
   min-height: 436px;
 }
 
