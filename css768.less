@@ -1,3 +1,10 @@
+@square: 50px;
+@smallsquare: 50px;
+@full-width: 100%;
+@full-height: 100%;
+@border-color: rgba(189, 189, 189, 0.2);
+
+// mixin
 .full {
   width: 100%;
   height: 100%;
@@ -15,15 +22,17 @@ body {
 }
 
 /* header */
-.navlogo:hover a {
-  background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/home-1.gif);
-  background-position: 50%;
-  background-size: cover;
+
+.navlogo:hover {
+  a {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/home-1.gif);
+    background-position: 50%;
+    background-size: cover;
+  }
 }
 
 .icon {
-  width: 100%;
-  height: 100%;
+  .full();
 }
 
 .bigscreen-menu,
@@ -32,7 +41,7 @@ body {
 }
 
 .border768 {
-  border-bottom: 61px solid rgba(189, 189, 189, 0.2);
+  border-bottom: 61px solid @border-color;
 }
 
 li.list {
@@ -40,6 +49,7 @@ li.list {
 }
 
 /* cover */
+
 .cover {
   padding: 0 4px;
   margin: 0 auto;
@@ -62,15 +72,15 @@ li.list {
 }
 
 .image1 {
-  grid-area: 1 / 1 / 3 / 3;
+  grid-area: e("1 / 1 / 3 / 3");
   height: 498px;
-  width: 100%;
+  width: @full-width;
   background-position: center;
 }
 
 .image2 {
-  width: 100%;
-  height: 100%;
+  .full();
+
   background-position: center;
 }
 
@@ -80,15 +90,15 @@ li.no-share768 {
 
 .cover-link768 {
   bottom: 0;
-}
 
-.cover-link768 .author {
-  padding-top: 8px;
-}
+  .author {
+    padding-top: 8px;
+  }
 
-.cover-link768 h2 {
-  line-height: 1.3;
-  font-size: 32px;
+  h2 {
+    line-height: 1.3;
+    font-size: 32px;
+  }
 }
 
 .cover-header768 {
@@ -97,6 +107,7 @@ li.no-share768 {
 }
 
 /* articlequery */
+
 .article-grid {
   padding: 0;
   display: grid;
@@ -112,7 +123,7 @@ li.no-share768 {
 }
 
 .icon-article {
-  width: 100%;
+  width: @full-width;
   height: 10%;
 }
 
@@ -127,6 +138,7 @@ li.no-share768 {
 }
 
 /* funding */
+
 .funding-grid {
   display: grid;
   grid-row-gap: 10px;
@@ -140,8 +152,7 @@ li.no-share768 {
 }
 
 .dego {
-  width: 100%;
-  height: 100%;
+  .full();
 }
 
 .container1 {
@@ -150,6 +161,7 @@ li.no-share768 {
 }
 
 /* hard fork */
+
 .fork {
   padding: 0;
   display: grid;
@@ -173,6 +185,7 @@ h2.latest-fork {
 }
 
 /* footer */
+
 .copyright {
   padding: 3em 0;
 }
@@ -181,20 +194,21 @@ h2.latest-fork {
   display: inline;
 }
 
+// nestedfooter
+
 .social-link-wrapper {
   padding-bottom: 0;
-}
 
-.social-link-wrapper .links {
-  padding-bottom: 1.5em;
-}
+  .links {
+    padding-bottom: 1.5em;
 
-.social-link-wrapper .links li {
-  font-size: 13px;
-  font-weight: lighter;
-}
+    li {
+      font-size: 13px;
+      font-weight: lighter;
 
-.social-link-wrapper .links li a {
-  width: 100%;
-  height: 100%;
+      a {
+        .full();
+      }
+    }
+  }
 }
